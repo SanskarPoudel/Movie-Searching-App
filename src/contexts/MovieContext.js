@@ -18,7 +18,7 @@ const MovieContextProvider = ({ children }) => {
     event.preventDefault();
     setIsLoading(true);
     const response = await axios.get(
-      `http://www.omdbapi.com/?s=${searchInput}&apikey=17ccb0e`
+      `https://www.omdbapi.com/?s=${searchInput}&apikey=17ccb0e`
     );
     setMovies((_) => {
       return response.data.Search;
